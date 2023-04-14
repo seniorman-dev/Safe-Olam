@@ -61,9 +61,8 @@ dependencies:
   get: ^4.6.5
   get_storage: ^2.1.1
   uuid: ^3.0.7
+  
   ##### date time pickers
-  scroll_date_picker: ^3.7.0
-  flutter_holo_date_picker: ^1.1.0
   cupertino_date_textbox: ^1.0.3
 
 dev_dependencies:

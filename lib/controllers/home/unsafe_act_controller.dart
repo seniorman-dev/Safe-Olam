@@ -12,7 +12,6 @@ import 'package:olam_grains/styles/botton_styles.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:olam_grains/util/loading_dialog_box.dart';
 import 'package:uuid/uuid.dart';
-import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 
 
 
@@ -22,28 +21,6 @@ import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 class UnSafeActController extends GetxController {
 
   final LoginController loginController = Get.put(LoginController());
-
-  //flutter holo date picker plugin
-  Future<void> showDatePickerDialogue(BuildContext context) async{
-    var datePicked = await DatePicker.showSimpleDatePicker(
-      context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(1960),
-      lastDate: DateTime(2090),
-      dateFormat: "dd-MMMM-yyyy",
-      locale: DateTimePickerLocale.en_us,
-      looping: true,
-      titleText: 'Select Date',
-      confirmText: 'Ok',
-      cancelText: 'Cancel',
-      //itemTextStyle: TextStyle(
-        //color: AppTheme.mainColor
-      //)
-      //textColor: AppTheme.mainColor
-    );
-    debugPrint("$datePicked");
-    //Get.snackbar('Picked!', "$datePicked", duration: const Duration(seconds: 2), isDismissible: false, colorText: Colors.black, borderRadius: 10, backgroundColor: AppTheme.whiteColor, snackPosition: SnackPosition.BOTTOM, dismissDirection: DismissDirection.down);
-  }
 
 
 
