@@ -15,6 +15,8 @@ import 'package:uuid/uuid.dart';
 
 
 
+
+
 class NearMissController extends GetxController {
 
   final LoginController loginController = Get.put(LoginController());
@@ -34,8 +36,11 @@ class NearMissController extends GetxController {
   bool isTimeControllerSelected = false;
 
 
+  //for cupertino date picker
   bool isDateSelected = false;
-  DateTime selectedDate = DateTime.now();  //for date picker plugin
+  DateTime selectedDate = DateTime.now();
+  
+  //user inputted date of event
   DateTime serverTimeStamp = DateTime.now();
 
 
@@ -177,7 +182,7 @@ class NearMissController extends GetxController {
 
   Future<void> saveDetails(BuildContext context) async{
     try {
-      if(isImageEmpty == true || nameController.text.isEmpty || reportController.text.isEmpty || locationController.text.isEmpty || isDateSelected == true || timeController.text.isEmpty) {
+      if(isImageEmpty == true || nameController.text.isEmpty || reportController.text.isEmpty || locationController.text.isEmpty || timeController.text.isEmpty) {
         Get.snackbar('Error', "kindly fill in required information", duration: const Duration(seconds: 2), isDismissible: false, colorText: Colors.black, borderRadius: 10, backgroundColor: AppTheme.whiteColor, snackPosition: SnackPosition.BOTTOM, dismissDirection: DismissDirection.down);
       }
       else {

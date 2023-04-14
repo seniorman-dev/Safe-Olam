@@ -1,20 +1,37 @@
+import 'package:cupertino_date_textbox/cupertino_date_textbox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:olam_grains/constants/app_theme.dart';
 import 'package:olam_grains/controllers/home/near_miss_controller.dart';
 import 'package:olam_grains/util/appbar.dart';
-import 'package:olam_grains/widget/home/report_event/custom_date_picker/date_picker3.dart';
 
 
 
 
 
-class NearMiss extends StatelessWidget {
+
+class NearMiss extends StatefulWidget {
   NearMiss({super.key});
-  
+
+  @override
+  State<NearMiss> createState() => _NearMissState();
+}
+
+class _NearMissState extends State<NearMiss> {
+
   final NearMissController controller  = Get.put(NearMissController());
+
+  //for date 
+  void onDateChanged(DateTime date) {
+    setState(() {
+      controller.selectedDate = date;
+      controller.isDateSelected = true;
+      debugPrint("${controller.selectedDate}");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -148,87 +165,27 @@ class NearMiss extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.h,),
-          //date text form field
-          /*TextFormField(
-            onSaved: (value) {      
-              controller.dateController.text = value!;
-            },
-            controller: controller.dateController,
-            keyboardType: TextInputType.datetime,
-            autocorrect: true,
-            inputFormatters: [],
-            enableSuggestions: true,
-            enableInteractiveSelection: true,
-            cursorColor: AppTheme.blackColor,
-            style: TextStyle(color: Colors.black),
-            decoration: InputDecoration(
-              //contentPadding: fieldContentPadding,
-              hintText: 'Date (dd/mm/yyyy)',
-              alignLabelWithHint: true,
-              hintStyle: TextStyle(
-                color: AppTheme.lightGreyText
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.lightGreyText.withOpacity(0.3), width: 1.0),
-                borderRadius: BorderRadius.circular(5)
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.mainColor, width: 1.0),
-                borderRadius: BorderRadius.circular(5)
-              ),
-            ),
-          ),*/
-
-          InkWell(
-            onTap: () {
-              Get.to(() => const CustomDatePicker3());
-              debugPrint("${controller.selectedDate}");
-              debugPrint("${controller.isDateSelected}");
-            },
-            child: Container(
-              height: 70.h,
-              width: double.infinity,
-              //padding: EdgeInsets.all(15.h),
-              //margin: EdgeInsets.only(bottom: 15.h),
-              padding: EdgeInsets.symmetric(
-                vertical: 10.h,
-                horizontal: 13.w
-              ),
-              decoration: BoxDecoration(
-                color: AppTheme.backgroundColor,
-                borderRadius: BorderRadius.circular(15.r),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
-                    spreadRadius: 0.1.r,
-                    blurRadius: 8.0.r,
-                  )
-                ],
-                border: Border.all(
-                  color: AppTheme.mainColor,
-                  width: 1,
-                  strokeAlign: BorderSide.strokeAlignInside
-                )
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    controller.isDateSelected ? "${controller.selectedDate}" : 'Select Date',
-                    style: TextStyle(
-                      color: AppTheme.lightGreyText,
-                      fontSize: 14.sp,
-                    ),
-                  ),
-                  const Icon(
-                    CupertinoIcons.chevron_down,
-                    color: AppTheme.blackColor,
-                    size: 25,
-                  ),
-                ],
-              )
-            ),
+          
+          ////////////////////////// Cupertino is simply the best 😎
+          Text(
+            'When did it happen?',
+            style: TextStyle(
+              color: AppTheme.lightGreyText,
+              fontSize: 14.sp,
+            )
           ),
+          SizedBox(height: 10.h,),
+          CupertinoDateTextBox(
+            initialValue: controller.selectedDate,
+            onDateChange: onDateChanged,
+            hintText: controller.isDateSelected 
+            ? DateFormat.yMd() .format(controller.selectedDate) 
+            : 'When did it happen?',
+            hintColor: AppTheme.lightGreyText,
+            
+          ),
+          
+          //////////////////
 
           SizedBox(height: 20.h,),
           //time text form field
