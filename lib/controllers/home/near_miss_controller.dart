@@ -351,7 +351,8 @@ class NearMissController extends GetxController {
                       ),
                       onPressed: () {
                         //Get.back();
-                        saveSelectedImageToFirebase().whenComplete(() => Get.back());
+                        //showLoadingDialog(context).whenComplete(() => saveSelectedImageToFirebase().whenComplete(() => Get.back()));
+                        saveSelectedImageToFirebase().whenComplete(() => showLoadingDialog(context).whenComplete(() => Get.back()));
                       },
                       child: Text(
                         'Done',
