@@ -30,7 +30,7 @@ class UnsafeConditionDetailsPage extends StatelessWidget {
         extendBodyBehindAppBar: true,
         resizeToAvoidBottomInset: false,
         backgroundColor: AppTheme.backgroundColor,
-        appBar: CustomAppBar(title: 'Unsafe Act',),
+        appBar: CustomAppBar(title: 'Unsafe Condition',),
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: buildBody(context,),
