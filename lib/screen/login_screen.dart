@@ -204,6 +204,9 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 setState(() {
                   loginController.dropDownValueForCountry = value;
+                  loginController.isPlantSelected = !loginController.isPlantSelected;
+                  //newly added logic to fix the glitching bug
+                  loginController.isPlantSelected == false ? loginController.dropDownValueForCountry = 'Select Country' : loginController.dropDownValueForCountry = value;
                 });
                 debugPrint(loginController.dropDownValueForCountry); //this is what will be stored to database
               },
