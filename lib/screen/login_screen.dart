@@ -272,21 +272,7 @@ class _LoginScreenState extends State<LoginScreen> {
               items: 
               
               /********************** */
-              loginController.dropDownValueForCountry == "Nigeria (NG)" ? loginController.olamNigeriaPlantList
-              .map<DropdownMenuItem>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(
-                    value,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.sp,
-                      //fontWeight: FontWeight.w500
-                    ),
-                  )
-                );
-              }).toList()
-              : loginController.dropDownValueForCountry == "Australia" ? 
+              loginController.dropDownValueForCountry == "Australia" ? 
               loginController.olamAustraliaPlantList
               .map<DropdownMenuItem>((String value) {
                 return DropdownMenuItem<String>(
@@ -526,6 +512,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 );
               }).toList()
+              : loginController.dropDownValueForCountry == "Nigeria" ? 
+              loginController.olamNigeriaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
               :loginController.dropDownValueForCountry == "Senegal" ? 
               loginController.olamSenegalPlantList
               .map<DropdownMenuItem>((String value) {
@@ -644,7 +645,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 minimumSize: Size.copy(Size(100.w, 50.h))
               ),
               onPressed: () {
-                loginController.dropDownValueForCountry == "Nigeria (NG)" && loginController.isPlantSelected ?  showLoadingDialog(context).whenComplete(() => Get.offAll(() => HomeScreen())) : null;
+                loginController.isPlantSelected ? showLoadingDialog(context).whenComplete(() => Get.offAll(() => HomeScreen())) : null;
               },
               child: Text(
                 'Proceed',

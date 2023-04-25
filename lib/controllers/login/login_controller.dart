@@ -26,41 +26,50 @@ class LoginController extends GetxController {
 
   /////////for all plants in each country
   final olamAustraliaPlantList = <String>[
+    'Select Plant',
     'Carwarp',
   ];
 
   final olamBrazilPlantList = <String>[
+    'Select Plant',
     'Joanes Factory',
   ];
 
   final olamCameroonPlantList = <String>[
+    'Select Plant',
     'Douala Flour',
   ];
 
   final olamChinaPlantList = <String>[
+    'Select Plant',
     'Jinxiang',
   ];
 
   final olamCongoPlantList = <String>[
+    'Select Plant',
     'CIB Pokola',
   ];
 
   final olamEgyptPlantList = <String>[
+    'Select Plant',
     '6th October',
     'Beni Suef'
   ];
 
   final olamGabonPlantList = <String>[
+    'Select Plant',
     'MOUILA',
     'AWALA',
     'EX-SIAT'
   ];
 
   final olamGermanyPlantList = <String>[
+    'Select Plant',
     'Mannheim',
   ];
 
   final olamGhanaPlantList = <String>[
+    'Select Plant',
     'Kumasi',
     'TEMA WHEAT',
     'Accra PFB Biscuits',
@@ -68,32 +77,39 @@ class LoginController extends GetxController {
   ];
 
   final olamGreatBritainPlantList = <String>[
+    'Select Plant',
     'Goole',
   ];
 
   final olamIndiaPlantList = <String>[
+    'Select Plant',
     'Spices Kochi',
   ];
 
   final olamIndonesiaPlantList = <String>[
+    'Select Plant',
     'BT Cocoa',
   ];
 
   final olamIvoryCoastPlantList = <String>[
+    'Select Plant',
     'San Pedro',
     'OCP - Abidjan'
   ];
 
   final olamMalaysiaPlantList = <String>[
+    'Select Plant',
     'Johar',
   ];
 
   final olamMozambiquePlantList = <String>[
+    'Select Plant',
     'BEIRA',
     'MAPUTO',
   ];
 
   final olamNetherlandsPlantList = <String>[
+    'Select Plant',
     'KOOG',
     'WORMER'
   ];
@@ -126,6 +142,7 @@ class LoginController extends GetxController {
   ];
 
   final olamSenegalPlantList = <String>[
+    'Select Plant',
     'Diamniadio Flour',
   ];
 
@@ -135,16 +152,19 @@ class LoginController extends GetxController {
   ];
 
   final olamSpainPlantList = <String>[
+    'Select Plant',
     'Valencia',
     'Palencia',
     'SEDA Outspan - Villamuriel'
   ];
 
   final olamTurkeyPlantList = <String>[
+    'Select Plant',
     'Piraziz Hazelnut',
   ];
 
   final olamUSAPlantList = <String>[
+    'Select Plant',
     'Blakely',
     'Dublin',
     'Edenton',
@@ -162,6 +182,7 @@ class LoginController extends GetxController {
   ];
 
   final olamVietnamPlantList = <String>[
+    'Select Plant',
     'LOTECO',
     'DUCATI',
     'Olam Cafe Outspan',
@@ -191,7 +212,7 @@ class LoginController extends GetxController {
     'Malaysia',
     'Mozambique',
     'Netherlands'
-    'Nigeria (NG)',
+    'Nigeria',
     'Senegal',
     'Singapore',
     'Spain',
