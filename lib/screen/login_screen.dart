@@ -286,7 +286,262 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 );
               }).toList()
-              : loginController.dropDownValueForCountry == "Singapore" ? 
+              : loginController.dropDownValueForCountry == "Australia" ? 
+              loginController.olamAustraliaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              : loginController.dropDownValueForCountry == "Brazil" ? 
+              loginController.olamBrazilPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Cameroon" ? 
+              loginController.olamCameroonPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "China" ? 
+              loginController.olamChinaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Congo" ? 
+              loginController.olamCongoPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Egypt" ? 
+              loginController.olamEgyptPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Gabon" ? 
+              loginController.olamGabonPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Germany" ? 
+              loginController.olamGermanyPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Ghana" ? 
+              loginController.olamGhanaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Great Britain" ? 
+              loginController.olamGreatBritainPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "India" ? 
+              loginController.olamIndiaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Indonesia" ? 
+              loginController.olamIndonesiaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Ivory Coast" ? 
+              loginController.olamIvoryCoastPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Malaysia" ? 
+              loginController.olamMalaysiaPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Mozambique" ? 
+              loginController.olamMozambiquePlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Netherlands" ? 
+              loginController.olamNetherlandsPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Senegal" ? 
+              loginController.olamSenegalPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Singapore" ? 
               loginController.olamSingaporePlantList
               .map<DropdownMenuItem>((String value) {
                 return DropdownMenuItem<String>(
@@ -301,7 +556,67 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 );
               }).toList()
-              : null, 
+              :loginController.dropDownValueForCountry == "Spain" ? 
+              loginController.olamSpainPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Turkey" ? 
+              loginController.olamTurkeyPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "US" ? 
+              loginController.olamUSAPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :loginController.dropDownValueForCountry == "Vietnam" ? 
+              loginController.olamVietnamPlantList
+              .map<DropdownMenuItem>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(
+                    value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      //fontWeight: FontWeight.w500
+                    ),
+                  )
+                );
+              }).toList()
+              :null, ///the end
               /************************** keep using the tenary operator to specify for all the countries */
 
 

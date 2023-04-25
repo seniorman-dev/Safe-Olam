@@ -23,29 +23,181 @@ class LoginController extends GetxController {
   Country? country; //save to firebase
   String dropDownValueForPlant = "Select Plant"; //save to firebase
   String dropDownValueForCountry = "Select Country"; //save to firebase
+
+  /////////for all plants in each country
+  final olamAustraliaPlantList = <String>[
+    'Carwarp',
+  ];
+
+  final olamBrazilPlantList = <String>[
+    'Joanes Factory',
+  ];
+
+  final olamCameroonPlantList = <String>[
+    'Douala Flour',
+  ];
+
+  final olamChinaPlantList = <String>[
+    'Jinxiang',
+  ];
+
+  final olamCongoPlantList = <String>[
+    'CIB Pokola',
+  ];
+
+  final olamEgyptPlantList = <String>[
+    '6th October',
+    'Beni Suef'
+  ];
+
+  final olamGabonPlantList = <String>[
+    'MOUILA',
+    'AWALA',
+    'EX-SIAT'
+  ];
+
+  final olamGermanyPlantList = <String>[
+    'Mannheim',
+  ];
+
+  final olamGhanaPlantList = <String>[
+    'Kumasi',
+    'TEMA WHEAT',
+    'Accra PFB Biscuits',
+    'Accra PFB Tomato Paste'
+  ];
+
+  final olamGreatBritainPlantList = <String>[
+    'Goole',
+  ];
+
+  final olamIndiaPlantList = <String>[
+    'Spices Kochi',
+  ];
+
+  final olamIndonesiaPlantList = <String>[
+    'BT Cocoa',
+  ];
+
+  final olamIvoryCoastPlantList = <String>[
+    'San Pedro',
+    'OCP - Abidjan'
+  ];
+
+  final olamMalaysiaPlantList = <String>[
+    'Johar',
+  ];
+
+  final olamMozambiquePlantList = <String>[
+    'BEIRA',
+    'MAPUTO',
+  ];
+
+  final olamNetherlandsPlantList = <String>[
+    'KOOG',
+    'WORMER'
+  ];
+
   final olamNigeriaPlantList = <String>[
     'Select Plant', 
-    'TinCan A, Lagos', 
-    'TinCan B, Lagos', 
-    'Warri Port C, Warri', 
-    'Dock Yard D, PortHarcourt', 
-    "TinCan E, Lagos", 
-    'TinCan F, Lagos',
-    "Olam Abuja",     
+    'Sesame Sagamu Processing' ,
+    'CFM Beachland',
+    'OK SWEETS',
+    'NG AFP Animal Feed Kaduna',
+    'NG AFP Animal Feed Ilorin',
+    'NG AFP Fish Feed Ilorin',
+    'NG Rice Mill',
+    'PHC Factory',
+    'OK FOODS 1',
+    'OK FOODS 2',
+    'TINCAN A',
+    'TINCAN B',
+    'Ruyat Oil Limited',
+    'Warri',
+    'PFB NOODLE',
+    'APAPA MFG',
+    'IKORODU',
+    'DFM KANO',
+    'DFM ILORIN',
+    'PFB Dry Packing',
+    'DFM CALABAR',
+    'Tomato Paste',
+    'Ranona Beverages'
   ];
+
+  final olamSenegalPlantList = <String>[
+    'Diamniadio Flour',
+  ];
+
   final olamSingaporePlantList = <String>[
     'Select Plant', 
-    'Singapore A', 
-    'Singapore B', 
-    'Singapore C', 
-    'Singapore D', 
-    "Singapore E", 
-    'Singapore F',
-    "Olam HQ (Singapore)",     
+    'Cocoa Processing',    
   ];
+
+  final olamSpainPlantList = <String>[
+    'Valencia',
+    'Palencia',
+    'SEDA Outspan - Villamuriel'
+  ];
+
+  final olamTurkeyPlantList = <String>[
+    'Piraziz Hazelnut',
+  ];
+
+  final olamUSAPlantList = <String>[
+    'Blakely',
+    'Dublin',
+    'Edenton',
+    'Gilroy',
+    'FIREBAUGH',
+    'FERNLEY',
+    'SMITHVILLE',
+    'Las Cruses',
+    'HNI Livingston',
+    'HNI Leedom',
+    'HNI Verduga',
+    'Samson',
+    'New Rochelle',
+    'Sylvester'
+  ];
+
+  final olamVietnamPlantList = <String>[
+    'LOTECO',
+    'DUCATI',
+    'Olam Cafe Outspan',
+    'Bien Hoa',
+    'Tien Nga',
+    'Giang Dien',
+    'CPC-Vietnam',
+  ];
+
+
+  ////////////////for all olam plants world wide
   final olamPlantCountryList = <String>[
-    'Select Country', 
-    'Nigeria (NG)', 
+    'Select Country',
+    'Australia',
+    'Brazil',
+    'Cameroon',
+    'China',
+    'Congo',
+    'Egypt',
+    'Gabon',
+    'Germany',
+    'Ghana',
+    'Great Britain',
+    'India',
+    'Indonesia',
+    'Ivory Coast',
+    'Malaysia',
+    'Mozambique',
+    'Netherlands'
+    'Nigeria (NG)',
+    'Senegal',
+    'Singapore',
+    'Spain',
+    'Turkey',
+    'US',
+    'Vietnam'
     //'Singapore',   
   ];
 
