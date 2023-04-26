@@ -53,10 +53,11 @@ class _LoginScreenState extends State<LoginScreen> {
         children: <Widget>[
           SizedBox(height: 50.h,),
           Center(
-            child: //CachedNetworkImage(
-              //imageUrl: 'https://www.world-grain.com/ext/resources/2023/01/05/Olam-Agri-logo_e.jpg?height=667&t=1672930491&width=1080',
-            //)
-            Image.asset("assets/png/olam_orange.png"),
+            child: Image.asset(
+              "assets/png/olam_orange.png",
+              //width: 100,
+              //height: 100,
+            ),
           ),
           SizedBox(height: 90.0.h),
 
@@ -160,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
               iconSize: 20.h,
               icon: const Icon(
                 CupertinoIcons.chevron_down,
-                color: AppTheme.mainColor,
+                color: AppTheme.lightOrangeColor,
                 size: 25,
               ),
               dropdownColor: AppTheme.whiteColor,
@@ -208,7 +209,8 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 setState(() {
                   loginController.dropDownValueForCountry = value;
-                  ////loginController.isCountryChanged = true;
+                  //loginController.isCountryChanged = true;
+                  //loginController.isCountryChanged = !loginController.isCountryChanged;
                 });
                 debugPrint(loginController.dropDownValueForCountry); //this is what will be stored to database
               },
@@ -243,11 +245,11 @@ class _LoginScreenState extends State<LoginScreen> {
               iconSize: 20.h,
               icon: const Icon(
                 CupertinoIcons.chevron_down,
-                color: AppTheme.mainColor,
+                color: AppTheme.lightOrangeColor,
                 size: 25,
               ),
               dropdownColor: AppTheme.whiteColor,
-              value: loginController.dropDownValueForPlant,
+              value: loginController.isCountryChanged ? loginController.dropDownValueForPlant = 'Select Plant': loginController.dropDownValueForPlant,
               style: const TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 alignLabelWithHint: true,   
@@ -648,7 +650,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 //disabledBackgroundColor:AppTheme.darkBlueButtonColor.withOpacity(0.6),
-                backgroundColor: loginController.isPlantSelected ? AppTheme.mainColor : AppTheme.mainColor.withOpacity(0.4),
+                backgroundColor: loginController.isPlantSelected ? AppTheme.orangeColor : AppTheme.lightOrangeColor,
                 minimumSize: Size.copy(Size(100.w, 50.h))
               ),
               onPressed: () {

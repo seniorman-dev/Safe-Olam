@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           //disabledBackgroundColor:AppTheme.darkBlueButtonColor.withOpacity(0.6),
-          backgroundColor: AppTheme.mainColor,
+          backgroundColor: AppTheme.orangeColor,
           minimumSize: Size.copy(Size(100.w, 50.h))
         ),
         onPressed: onPressed,

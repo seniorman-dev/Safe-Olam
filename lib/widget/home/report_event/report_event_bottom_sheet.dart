@@ -60,14 +60,14 @@ Future<void> reportEventBottomSheet({required BuildContext context}) async {
                 children: [
                   Icon(
                     Icons.assignment_outlined,
-                    color: AppTheme.mainColor,
+                    color: AppTheme.orangeColor,
                     size: 50.h,
                   ),
                   SizedBox(width: 7.w),
                   Text(
                     'Select Event',
                     style: TextStyle(
-                      color: AppTheme.mainColor,
+                      color: AppTheme.orangeColor,
                       fontSize: 17.sp,
                       fontWeight: FontWeight.bold
                     ),
@@ -117,7 +117,7 @@ Future<void> reportEventBottomSheet({required BuildContext context}) async {
                         child: Text(
                           'Unsafe Act',
                           style: TextStyle(
-                            color: AppTheme.mainColor,
+                            color: AppTheme.orangeColor,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500
                           ),
@@ -139,7 +139,7 @@ Future<void> reportEventBottomSheet({required BuildContext context}) async {
                         child: Text(
                           'Unsafe Condition',
                           style: TextStyle(
-                            color: AppTheme.mainColor,
+                            color: AppTheme.orangeColor,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500
                           ),
@@ -161,7 +161,7 @@ Future<void> reportEventBottomSheet({required BuildContext context}) async {
                         child: Text(
                           'Near Miss',
                           style: TextStyle(
-                            color: AppTheme.mainColor,
+                            color: AppTheme.orangeColor,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500
                           ),
@@ -181,7 +181,7 @@ Future<void> reportEventBottomSheet({required BuildContext context}) async {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppTheme.mainColor,
+                        backgroundColor: AppTheme.orangeColor,
                         minimumSize: Size.copy(
                           Size(100.w, 55.h),
                         ),

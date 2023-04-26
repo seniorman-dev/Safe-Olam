@@ -98,7 +98,7 @@ class _UnSafeActState extends State<UnSafeAct> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -130,7 +130,7 @@ class _UnSafeActState extends State<UnSafeAct> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -164,7 +164,7 @@ class _UnSafeActState extends State<UnSafeAct> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -201,7 +201,7 @@ class _UnSafeActState extends State<UnSafeAct> {
             },
             scrollPhysics: BouncingScrollPhysics(),
             controller: controller.timeController,
-            keyboardType: TextInputType.datetime,
+            keyboardType: TextInputType.text,
             autocorrect: true,
             inputFormatters: [],
             enableSuggestions: true,
@@ -220,7 +220,7 @@ class _UnSafeActState extends State<UnSafeAct> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -235,7 +235,7 @@ class _UnSafeActState extends State<UnSafeAct> {
               child: Text(
                 'Upload Photo',
                 style: TextStyle(
-                  color: AppTheme.mainColor,
+                  color: AppTheme.orangeColor,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.bold
                 ),
@@ -289,7 +289,7 @@ class _UnSafeActState extends State<UnSafeAct> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 //disabledBackgroundColor:AppTheme.darkBlueButtonColor.withOpacity(0.6),
-                backgroundColor: AppTheme.mainColor,
+                backgroundColor: AppTheme.orangeColor,
                 minimumSize: Size.copy(Size(100.w, 50.h))
               ),
               onPressed: () {

@@ -95,7 +95,7 @@ class _NearMissState extends State<NearMiss> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: const BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -127,7 +127,7 @@ class _NearMissState extends State<NearMiss> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: const BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -159,7 +159,7 @@ class _NearMissState extends State<NearMiss> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: const BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -195,7 +195,7 @@ class _NearMissState extends State<NearMiss> {
             },
             scrollPhysics: BouncingScrollPhysics(),
             controller: controller.timeController,
-            keyboardType: TextInputType.datetime,
+            keyboardType: TextInputType.text,
             autocorrect: true,
             inputFormatters: [],
             enableSuggestions: true,
@@ -214,7 +214,7 @@ class _NearMissState extends State<NearMiss> {
                 borderRadius: BorderRadius.circular(5)
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: AppTheme.mainColor, width: 1.0),
+                borderSide: const BorderSide(color: AppTheme.orangeColor, width: 1.0),
                 borderRadius: BorderRadius.circular(5)
               ),
             ),
@@ -229,7 +229,7 @@ class _NearMissState extends State<NearMiss> {
               child: Text(
                 'Upload Photo',
                 style: TextStyle(
-                  color: AppTheme.mainColor,
+                  color: AppTheme.orangeColor,
                   fontSize: 15.sp,
                   fontWeight: FontWeight.bold
                 ),
@@ -286,7 +286,7 @@ class _NearMissState extends State<NearMiss> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 //disabledBackgroundColor:AppTheme.darkBlueButtonColor.withOpacity(0.6),
-                backgroundColor: AppTheme.mainColor,
+                backgroundColor: AppTheme.orangeColor,
                 minimumSize: Size.copy(Size(100.w, 50.h))
               ),
               onPressed: () {

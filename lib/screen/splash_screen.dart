@@ -22,15 +22,16 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       splash: Center(
-        child: Icon(
+        child: Image.asset('assets/png/olam_orange.png')
+        /*Icon(
           Icons.settings_outlined,
           color: AppTheme.mainColor,
           size: 200.h,
-        )   //color: Colors.black,
+        )*/  //color: Colors.black,
       ), 
       nextScreen: LoginScreen(), 
       duration: 2000, //4000
-      backgroundColor: AppTheme.whiteColor, 
+      backgroundColor: AppTheme.backgroundColor, 
       centered: true,
       splashIconSize: 500.h,  //700,
       //splashTransition: SplashTransition.scaleTransition,

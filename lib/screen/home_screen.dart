@@ -5,6 +5,7 @@ import 'package:olam_grains/constants/app_theme.dart';
 import 'package:olam_grains/widget/home/logout/log_out.dart';
 import 'package:olam_grains/widget/home/report_event/report_event_bottom_sheet.dart';
 import 'package:olam_grains/widget/home/reported_events/reported_events.dart';
+import 'package:olam_grains/widget/home/reported_events/specific_plant_events/plant/specific_plant_reported_event.dart';
 
 
 
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: FloatingActionButton(
           mini: false,
-          backgroundColor: AppTheme.mainColor,
+          backgroundColor: AppTheme.orangeColor,
           onPressed: () {
             showLogoutDialogue(context);
           },
@@ -81,14 +82,14 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(height: 40.h,),
                     Icon(
                       Icons.assignment_add,
-                      color: AppTheme.mainColor,
+                      color: AppTheme.orangeColor,
                       size: 60.h,
                     ),
                     SizedBox(height: 20.h,),
                     Text(
                       'Report an event',
                       style: TextStyle(
-                        color: AppTheme.mainColor,
+                        color: AppTheme.orangeColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.bold
                       ),
@@ -114,7 +115,7 @@ class HomeScreen extends StatelessWidget {
                 horizontal: 13.w
               ),
               decoration: BoxDecoration(
-                color: AppTheme.mainColor,
+                color: AppTheme.orangeColor,
                 borderRadius: BorderRadius.circular(15.r),
                 boxShadow: [
                   BoxShadow(
@@ -144,6 +145,37 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+          SizedBox(height: 40.h,),
+          Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'Want to view reported events from your plant?',
+                  style: TextStyle(
+                    color: AppTheme.darkGreyText,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(height: 10.h,),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => SpecificPlantEvents());
+                  },
+                  child: Text(
+                    'click here',
+                    style: TextStyle(
+                      color: AppTheme.orangeColor,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline
+                    ),
+                  ),
+                ),
+              ],
             ),
           )
         ]

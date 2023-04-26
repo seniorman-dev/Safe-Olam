@@ -46,10 +46,10 @@ class CustomAppBarForTab extends StatelessWidget with PreferredSizeWidget {
         automaticIndicatorColorAdjustment: true,
         physics: const BouncingScrollPhysics(),
         isScrollable: true,
-        indicatorColor: AppTheme.mainColor,
+        indicatorColor: AppTheme.orangeColor,
         indicatorWeight: 3,
         controller: tabBarController,
-        labelColor: AppTheme.mainColor,
+        labelColor: AppTheme.orangeColor,
         labelStyle: const TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 16,

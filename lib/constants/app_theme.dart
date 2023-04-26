@@ -8,4 +8,6 @@ class AppTheme{
   static const greenColor = Color.fromRGBO(49, 208, 170, 1);
   static const backgroundColor = Color(0xffFCFCFF);
   static const blackColor = Colors.black;
+  static const orangeColor = Color(0xFFE65100);
+  static const lightOrangeColor = Color(0xFFFFCC80);
 }

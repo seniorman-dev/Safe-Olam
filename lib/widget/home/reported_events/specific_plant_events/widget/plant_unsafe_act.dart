@@ -3,30 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:olam_grains/constants/app_theme.dart';
-import 'package:olam_grains/controllers/home/near_miss_controller.dart';
+import 'package:olam_grains/controllers/home/unsafe_act_controller.dart';
+import 'package:olam_grains/controllers/login/login_controller.dart';
 import 'package:olam_grains/util/loader.dart';
-import 'package:olam_grains/widget/home/reported_events/widget/details_page/near_miss_details_page.dart';
+import 'package:olam_grains/util/util_functions.dart';
+import 'package:olam_grains/widget/home/reported_events/specific_plant_events/details_page/unsafe_act_details_page.dart';
+import 'package:olam_grains/widget/home/reported_events/widget/details_page/unsafe_act_details_page.dart';
 
 
 
 
 
-class NearMissContainer extends StatelessWidget {
-  NearMissContainer({super.key});
 
-  NearMissController controller = Get.put(NearMissController());
+class  SpecificPlantUnSafeActContainer extends StatelessWidget {
+   SpecificPlantUnSafeActContainer({super.key});
+
+  UnSafeActController controller = Get.put(UnSafeActController());
+  LoginController loginController = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: controller.firestore.collection('near_miss').orderBy('time_sent').snapshots(),
+      stream: controller.firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}").orderBy('time_sent').snapshots(),
       builder: (context, snapshot) {
         if(snapshot.connectionState == ConnectionState.waiting) {
           return const Loader();
-        }
-        else if (snapshot.hasError) {
-          debugPrint('${snapshot.error}');
-          return Center(child: CircularProgressIndicator(strokeWidth: 3, color: Colors.red,),);
         }
         else if (snapshot.hasData) {
           return ListView.separated(
@@ -41,7 +42,7 @@ class NearMissContainer extends StatelessWidget {
               //data['event']
               return InkWell(
                 onTap: () {
-                  Get.to(() => NearMissDetailsPage(
+                  Get.to(() => PlantUnsafeActDetailsPage(  //change this //////
                     reporter: data['reporter'], 
                     eventLocation: data['event_location'], 
                     event: data['event'], 
@@ -49,7 +50,7 @@ class NearMissContainer extends StatelessWidget {
                     eventTime: data['event_time'], 
                     eventPhoto: data['event_photo'], 
                     country: data['country'], 
-                    plant: data['plant'],
+                    plant: data['plant'], 
                   ));
                 },
                 child: Padding(
@@ -129,9 +130,9 @@ class NearMissContainer extends StatelessWidget {
                                     fontWeight: FontWeight.w500
                                   ),
                                 ),
-                                //SizedBox(height: 5.h,),
+                                SizedBox(height: 5.h,),
                                 /*Text(
-                                  formatToTime(data['time_sent']), //server time stamp from firebase
+                                  "${controller.serverTimeStamp}", //server time stamp from firebase
                                   style: TextStyle(
                                     color: AppTheme.lightGreyText,
                                     fontSize: 13.sp,
@@ -150,14 +151,14 @@ class NearMissContainer extends StatelessWidget {
             }
           );
         }
-        else{
-          return SizedBox();
+        else if(snapshot.hasError) {
+          debugPrint('${snapshot.error}');
+          return Center(child: CircularProgressIndicator(strokeWidth: 3, color: Colors.red,),);
         }
+        else {
+          return SizedBox();
+        }   
       }
     );
   }
 }
-
-
-
-

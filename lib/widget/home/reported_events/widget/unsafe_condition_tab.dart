@@ -86,7 +86,7 @@ class UnSafeConditionContainer extends StatelessWidget {
                             SizedBox(
                               child: Icon(
                                 Icons.assignment_rounded,
-                                color: AppTheme.mainColor,
+                                color: AppTheme.orangeColor,
                                 size: 130.h,
                               )       
                             ),    

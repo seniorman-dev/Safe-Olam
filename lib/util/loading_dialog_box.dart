@@ -29,7 +29,7 @@ Future<void> showLoadingDialog(BuildContext context) {
           child: const Center(
             child: CircularProgressIndicator(
               strokeWidth: 5, //4
-              color: AppTheme.mainColor,
+              color: AppTheme.orangeColor,
             ),
           ),
         ),

@@ -55,7 +55,7 @@ import 'package:olam_grains/util/loading_dialog_box.dart';
                                 borderRadius: BorderRadius.all(Radius.circular(5.0))
                               ),
                               side: BorderSide(
-                                color: AppTheme.mainColor,
+                                color: AppTheme.orangeColor,
                                 style: BorderStyle.solid
                               ),
                               backgroundColor: AppTheme.whiteColor,
@@ -65,7 +65,7 @@ import 'package:olam_grains/util/loading_dialog_box.dart';
                             child: Text(
                               "Yes",
                               style: TextStyle(
-                                color: AppTheme.mainColor,
+                                color: AppTheme.orangeColor,
                                 fontSize: 16.sp,
                               ),
                             ),
@@ -90,11 +90,11 @@ import 'package:olam_grains/util/loading_dialog_box.dart';
                                 )
                               ),
                               side: BorderSide(
-                                color: AppTheme.mainColor,
+                                color: AppTheme.orangeColor,
                                   style: BorderStyle.solid
                               ),
-                              backgroundColor: AppTheme.mainColor,
-                              foregroundColor: AppTheme.mainColor,
+                              backgroundColor: AppTheme.orangeColor,
+                              foregroundColor: AppTheme.orangeColor,
                               minimumSize:const Size(double.infinity, 50)
                             ),
                             child: Text(

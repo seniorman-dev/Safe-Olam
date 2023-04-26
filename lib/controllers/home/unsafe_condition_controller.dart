@@ -186,6 +186,19 @@ class UnSafeConditionController extends GetxController {
         Get.snackbar('Error', "kindly fill in required information", duration: Duration(seconds: 2), isDismissible: false, colorText: Colors.black, borderRadius: 10, backgroundColor: AppTheme.whiteColor, snackPosition: SnackPosition.BOTTOM, dismissDirection: DismissDirection.down);
       }
       else {
+        //
+        await firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}")
+        .add({
+          'reporter': nameController.text,
+          'event': reportController.text,
+          'event_location': locationController.text,
+          'country': loginController.dropDownValueForCountry,
+          'plant': loginController.dropDownValueForPlant,
+          'event_date': "$selectedDate",
+          'event_time': timeController.text,
+          'time_sent': serverTimeStamp
+        });
+        //
         await firestore.collection('unsafe_condition').doc("${nameController.text}_${timeController.text}")
         .update({
           'reporter': nameController.text,
@@ -277,7 +290,7 @@ class UnSafeConditionController extends GetxController {
                         child: Text(
                           'Take Photo',
                           style: TextStyle(
-                            color: AppTheme.mainColor,
+                            color: AppTheme.orangeColor,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500
                           ),
@@ -299,7 +312,7 @@ class UnSafeConditionController extends GetxController {
                         child: Text(
                           'Select Photo From Gallery',
                           style: TextStyle(
-                            color: AppTheme.mainColor,
+                            color: AppTheme.orangeColor,
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w500
                           ),
@@ -341,7 +354,7 @@ class UnSafeConditionController extends GetxController {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppTheme.mainColor,
+                        backgroundColor: AppTheme.orangeColor,
                         minimumSize: Size.copy(
                           Size(100.w, 55.h),
                         ),
@@ -355,7 +368,7 @@ class UnSafeConditionController extends GetxController {
                         saveSelectedImageToFirebase().whenComplete(() => showLoadingDialog(context).whenComplete(() => Get.back()));
                       },
                       child: Text(
-                        'Done',
+                        'Save Photo',
                         style: buttonTextStyle(context),
                       ),
                     ),
