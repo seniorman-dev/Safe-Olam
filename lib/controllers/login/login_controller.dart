@@ -20,6 +20,7 @@ class LoginController extends GetxController {
 
   bool showDummyText = true;
   bool isPlantSelected = false;
+  bool isCountryChanged = false;
   Country? country; //save to firebase
   String dropDownValueForPlant = "Select Plant"; //save to firebase
   String dropDownValueForCountry = "Select Country"; //save to firebase
@@ -211,14 +212,14 @@ class LoginController extends GetxController {
     'Ivory Coast',
     'Malaysia',
     'Mozambique',
-    'Netherlands'
+    'Netherlands',
     'Nigeria',
     'Senegal',
     'Singapore',
     'Spain',
     'Turkey',
     'US',
-    'Vietnam'
+    'Vietnam',
     //'Singapore',   
   ];
 

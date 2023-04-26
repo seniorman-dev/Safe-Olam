@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -52,7 +53,10 @@ class _LoginScreenState extends State<LoginScreen> {
         children: <Widget>[
           SizedBox(height: 50.h,),
           Center(
-            child: Image.asset("assets/png/login_icon.png"),
+            child: //CachedNetworkImage(
+              //imageUrl: 'https://www.world-grain.com/ext/resources/2023/01/05/Olam-Agri-logo_e.jpg?height=667&t=1672930491&width=1080',
+            //)
+            Image.asset("assets/png/olam_orange.png"),
           ),
           SizedBox(height: 90.0.h),
 
@@ -204,9 +208,7 @@ class _LoginScreenState extends State<LoginScreen> {
               onChanged: (value) {
                 setState(() {
                   loginController.dropDownValueForCountry = value;
-                  loginController.isPlantSelected = !loginController.isPlantSelected;
-                  //newly added logic to fix the glitching bug
-                  loginController.isPlantSelected == false ? loginController.dropDownValueForCountry = 'Select Country' : loginController.dropDownValueForCountry = value;
+                  ////loginController.isCountryChanged = true;
                 });
                 debugPrint(loginController.dropDownValueForCountry); //this is what will be stored to database
               },
@@ -605,7 +607,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 );
               }).toList()
-              :loginController.dropDownValueForCountry == "Vietnam" ? 
+              :loginController.dropDownValueForCountry == "Vietnam"  ? 
               loginController.olamVietnamPlantList
               .map<DropdownMenuItem>((String value) {
                 return DropdownMenuItem<String>(
@@ -628,7 +630,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 setState(() {
                   loginController.dropDownValueForPlant = value;
                   loginController.isPlantSelected = true;
+                  //loginController.isCountryChanged = !loginController.isCountryChanged;
                 });
+                debugPrint("is country changed ? ${loginController.isCountryChanged}");
                 debugPrint(loginController.dropDownValueForPlant); //this is what will be stored to database
                 debugPrint("${loginController.isPlantSelected}");
               },
