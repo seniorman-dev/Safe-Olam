@@ -192,8 +192,8 @@ class UnSafeActController extends GetxController {
       }
       else {
         //
-        await firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}").doc("${nameController.text}_${timeController.text}")
-        .set({
+        await firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}").doc("${nameController.text}_${timeController.text}").collection('unsafe_act')
+        .add({
           'reporter': nameController.text,
           'event': reportController.text,
           'event_location': locationController.text,
