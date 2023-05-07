@@ -24,7 +24,7 @@ class  SpecificPlantUnSafeActContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: controller.firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}").orderBy('time_sent').snapshots(),
+      stream: controller.firestore.collection("${loginController.dropDownValueForCountry}_${loginController.dropDownValueForPlant}").doc("${controller.nameController.text}_${controller.timeController.text}").collection('unsafe_act').orderBy('time_sent').snapshots(),
       builder: (context, snapshot) {
         if(snapshot.connectionState == ConnectionState.waiting) {
           return const Loader();
